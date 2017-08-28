@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EyeProtector</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/setup.js"></script>
+    <script type="text/javascript" src="scripts/configuration.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <p>Eye Protector</p>
+        </div>
+        <div class="settings">
+            <div id="overlay" style="display: none;"></div>
+            <div id="error" style="display: none">
+                <p></p>
+            </div>
+            <p>Set custom settings:</p>
+            <div class="setting">
+                <div class="name">
+                    Starting Hour
+                </div>
+                <div class="value">
+                    <select name="starting-hour" id="starting-hour"></select>
+                </div>
+            </div>
+            <div class="setting">
+                <div class="name">
+                    Ending Hour
+                </div>
+                <div class="value">
+                    <select name="ending-hour" id="ending-hour"></select>
+                </div>
+            </div>
+            <div class="setting">
+                <div class="name">
+                    Period
+                </div>
+                <div class="value">
+                    <input type="checkbox" name="30min" id="30min"> <span>30 min</span>
+                    <input type="checkbox" name="59min" id="59min"> <span>60 min</span>
+                </div>
+            </div>
+        </div>
+        <div class="settings disable">
+            <p>Disable</p>
+            <div class="setting">
+                <div class="name">
+                    On Weekend
+                </div>
+                <div class="value">
+                    <input type="checkbox" name="disable-on-weekend" id="disable-on-weekend">
+                </div>
+            </div>
+            <div class="setting">
+                <div class="name">
+                    Always
+                </div>
+                <div class="value">
+                    <input type="checkbox" name="disable-always" id="disable-always">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

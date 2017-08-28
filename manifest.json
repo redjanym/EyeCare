@@ -1,0 +1,21 @@
+{
+  "name": "Eye Care",
+  "description": "An extension that reminds the computer to take care of it's eyes by resting every a period of time!",
+  "version": "0.1",
+  "manifest_version": 2,
+  "browser_action":
+  {
+    "default_icon": "icon16.png",
+    "default_title": "Eye Care",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": ["scripts/setup.js", "scripts/notify.js", "background.js"]
+  },
+  "icons": {
+    "128": "icon128.png",
+    "16": "icon16.png",
+    "48": "icon48.png"
+  },
+  "permissions": ["background", "notifications"]
+}
