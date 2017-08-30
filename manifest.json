@@ -1,7 +1,7 @@
 {
   "name": "Eye Care",
-  "description": "An extension that reminds the computer user to take care of it's eyes by resting every a period of time!",
-  "version": "0.2",
+  "description": "Take care of your eyes!",
+  "version": "0.3",
   "manifest_version": 2,
   "browser_action":
   {
