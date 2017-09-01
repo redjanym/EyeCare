@@ -5,7 +5,7 @@
   "manifest_version": 2,
   "browser_action":
   {
-    "default_icon": "icon16.png",
+    "default_icon": "images/icon16.png",
     "default_title": "Eye Care",
     "default_popup": "popup.html"
   },
@@ -13,9 +13,9 @@
     "scripts": ["scripts/setup.js", "scripts/notify.js", "background.js"]
   },
   "icons": {
-    "128": "icon128.png",
-    "16": "icon16.png",
-    "48": "icon48.png"
+    "128": "images/icon128.png",
+    "16": "images/icon16.png",
+    "48": "images/icon48.png"
   },
   "permissions": ["background", "notifications"]
 }

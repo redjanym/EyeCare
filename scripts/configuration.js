@@ -17,8 +17,10 @@ $(document).ready(function () {
     var endingHourInput = $('#ending-hour');
     var period30Input = $('#30min');
     var period59Input = $('#59min');
+    var notificationMessageInput = $('#message');
     var disableOnWeekendInput = $('#disable-on-weekend');
     var disableInput = $('#disable-always');
+    var enableSoundInput = $('#enable-sound');
 
     var options = '';
     for (var i = 1; i <= 24; i++) {
@@ -31,8 +33,11 @@ $(document).ready(function () {
     startingHourInput.val(Number(EP.startingHour) + 1).change();
     endingHourInput.val(Number(EP.endingHour) + 1).change();
     $('#' + EP.minutesPeriod + 'min').prop('checked', true);
+    notificationMessageInput.val(EP.notificationMessage);
     disableOnWeekendInput.prop('checked', EP.disableOnWeekend == 'true');
     disableInput.prop('checked', EP.disable == 'true');
+    enableSoundInput.prop('checked', EP.enableSound);
+
     if (EP.disable == 'true') {
         $('#overlay').show();
     }
@@ -100,6 +105,20 @@ $(document).ready(function () {
         backgroundPage.setUp();
     });
 
+    notificationMessageInput.keyup(function () {
+        var value = this.value;
+
+        if(value.length == 0){
+            showErrorMessage('Notification message must not be empty!');
+            return;
+        }
+
+        EP.notificationMessage = value;
+        localStorage.notificationMessage = value;
+
+        backgroundPage.setUp();
+    });
+
     disableOnWeekendInput.click(function () {
         EP.disableOnWeekend = this.checked;
         localStorage.disableOnWeekend = this.checked;
@@ -116,6 +135,13 @@ $(document).ready(function () {
         } else {
             $('#overlay').hide();
         }
+
+        backgroundPage.setUp();
+    });
+
+    enableSoundInput.click(function () {
+        EP.enableSound = this.checked;
+        localStorage.enableSound = this.checked;
 
         backgroundPage.setUp();
     });

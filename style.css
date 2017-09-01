@@ -3,15 +3,14 @@ html, body {
     padding:0;
     background-color: #E5E5E5;
 }
+
 .container {
-    width: 250px;
+    width: 350px;
     height: auto;
+    background-color: #ffffff
 }
 
 .container .title {
-    position: absolute;
-    top: 0;
-    width: 100%;
     height: 40px;
     background-color: #0083F8;
     color: #ffffff;
@@ -20,62 +19,34 @@ html, body {
 }
 
 .container .title p {
-    margin: 10px;
+    margin-top: 7px;
+    font-weight: 600;
+    font-size: 18px;
 }
 
-.container .settings {
-    margin-top: 40px;
-    padding: 10px 5px;
-    position: relative;
+.form-group {
+    margin-bottom: 0px;
 }
 
-.container .settings > p {
-    font-size: 14px;
-    margin: 10px 0;
+.settings {
+    margin-bottom: 10px;
 }
 
-.container .settings .setting {
-    display: block;
-    height: 25px;
-    font-size: 13px;
-    font-weight: 500;
-    margin: 3px 0;
-}
-.container .settings .setting input[type="number"] {
-    width: 100%;
+.settings .row {
+    margin-bottom: 3px;
 }
 
-.container .settings .setting div {
-    line-height: 24px;
-}
-
-.container .settings .setting .name {
-    width: 40%;
-    height: 100%;
-    background-color: #00A863;
-    color: #ffffff;
-    display: inline-block;
-    float: left;
-    text-align: right;
-    padding: 0 4px;
-}
-
-.container .settings .setting .value {
-    width: 56%;
-    height: 100%;
-    background-color: #ffffff;
-    color: #000000;
-    display: inline-block;
-    float: left;
+.settings .section-header {
+    border-bottom: 1px solid gray;
+    padding-top: 5px;
     text-align: left;
+    font-weight: 600;
+    margin-bottom: 10px;
 }
 
-#starting-hour, #ending-hour {
-    width: 100%;
-}
-
-.disable {
-    margin-top: -10px !important;
+.settings .name {
+    padding-top: 6px;
+    font-weight: 500;
 }
 
 #error {background-color: #a73232;

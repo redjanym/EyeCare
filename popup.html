@@ -3,64 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <title>EyeProtector</title>
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="scripts/setup.js"></script>
     <script type="text/javascript" src="scripts/configuration.js"></script>
 </head>
 <body>
     <div class="container">
-        <div class="title">
-            <p>Eye Protector</p>
-        </div>
-        <div class="settings">
-            <div id="overlay" style="display: none;"></div>
-            <div id="error" style="display: none">
-                <p></p>
-            </div>
-            <p>Set custom settings:</p>
-            <div class="setting">
-                <div class="name">
-                    Starting Hour
-                </div>
-                <div class="value">
-                    <select name="starting-hour" id="starting-hour"></select>
-                </div>
-            </div>
-            <div class="setting">
-                <div class="name">
-                    Ending Hour
-                </div>
-                <div class="value">
-                    <select name="ending-hour" id="ending-hour"></select>
-                </div>
-            </div>
-            <div class="setting">
-                <div class="name">
-                    Period
-                </div>
-                <div class="value">
-                    <input type="checkbox" name="30min" id="30min"> <span>30 min</span>
-                    <input type="checkbox" name="59min" id="59min"> <span>60 min</span>
-                </div>
+        <div class="row">
+            <div class="col-xs-12 title">
+                <p>Eye Care</p>
             </div>
         </div>
-        <div class="settings disable">
-            <p>Disable</p>
-            <div class="setting">
-                <div class="name">
-                    On Weekend
+        <div class="row settings">
+            <div class="col-xs-12 section-header">
+                <div id="overlay" style="display: none;"></div>
+                <div id="error" style="display: none">
+                    <p></p>
                 </div>
-                <div class="value">
-                    <input type="checkbox" name="disable-on-weekend" id="disable-on-weekend">
+                <p>Set custom settings</p>
+            </div>
+            <div class="col-xs-12">
+                <div class="row">
+                    <div class="col-xs-6 name">
+                        Starting Hour
+                    </div>
+                    <div class="col-xs-6 value">
+                        <div class="form-group">
+                            <select name="starting-hour" id="starting-hour" class="form-control"></select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 name">
+                        Ending Hour
+                    </div>
+                    <div class="col-xs-6 value">
+                        <div class="form-group">
+                            <select name="ending-hour" id="ending-hour" class="form-control"></select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 name">
+                        Period
+                    </div>
+                    <div class="col-xs-6 value">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="30min" id="30min">
+                                <span>30 min</span>
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="59min" id="59min">
+                                <span>60 min</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 name">
+                        Custom Message
+                    </div>
+                    <div class="col-xs-6 value">
+                        <div class="form-group">
+                            <input type="text" name="message" id="message" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 name" style="padding-top: 0px">
+                        Sound
+                    </div>
+                    <div class="col-xs-6 value">
+                        <input type="checkbox" name="enable-sound" id="enable-sound">
+                    </div>
                 </div>
             </div>
-            <div class="setting">
-                <div class="name">
-                    Always
+        </div>
+        <div class="row settings disable">
+            <div class="col-xs-12 section-header">
+                <p>Disable</p>
+            </div>
+            <div class="col-xs-12">
+                <div class="row">
+                    <div class="col-xs-6 name" style="padding-top: 0px">
+                        On Weekend
+                    </div>
+                    <div class="col-xs-6 value">
+                        <input type="checkbox" name="disable-on-weekend" id="disable-on-weekend">
+                    </div>
                 </div>
-                <div class="value">
-                    <input type="checkbox" name="disable-always" id="disable-always">
+                <div class="row">
+                    <div class="col-xs-6 name" style="padding-top: 0px">
+                        Always
+                    </div>
+                    <div class="col-xs-6 value">
+                        <input type="checkbox" name="disable-always" id="disable-always">
+                    </div>
                 </div>
             </div>
         </div>

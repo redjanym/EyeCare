@@ -3,7 +3,7 @@ chrome.runtime.getBackgroundPage(function (backgroundPage) {
 
     var notification = new Notify(EP.notificationTitle, {
         body: EP.notificationMessage,
-        icon: "icon128.png",
+        icon: "images/icon128.png",
         timeout: 2,
         notifyClick: stopSendingNotifications
     });
@@ -18,6 +18,10 @@ chrome.runtime.getBackgroundPage(function (backgroundPage) {
     }
 
     function audioNotification() {
+        if(EP.enableSound == false){
+            return;
+        }
+
         var sound = new Audio('sound.mp3');
         sound.volume = 0.2;
         sound.play();

@@ -4,6 +4,7 @@ var EP = {
     minutesPeriod: 30,
     notificationTitle: "Remember",
     notificationMessage: "Go and do some rest for your eyes!",
+    enableSound: true,
     disable: false,
     disableOnWeekend: false
 };
@@ -32,6 +33,9 @@ function setUp () {
         }
         if(localStorage.disableOnWeekend){
             EP.disableOnWeekend = localStorage.disableOnWeekend;
+        }
+        if(localStorage.enableSound){
+            EP.enableSound = localStorage.enableSound;
         }
     }
 }
