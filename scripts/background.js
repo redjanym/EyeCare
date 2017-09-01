@@ -47,5 +47,7 @@ chrome.runtime.getBackgroundPage(function (backgroundPage) {
         } else if (!itsTime()) {
             keepSendingNotifications = true;
         }
+        
+        console.log(EP);
     }, 5000);
 });

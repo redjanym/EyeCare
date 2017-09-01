@@ -1,7 +1,7 @@
 {
   "name": "Eye Care",
   "description": "Take care of your eyes!",
-  "version": "0.3",
+  "version": "0.4",
   "manifest_version": 2,
   "browser_action":
   {
@@ -10,7 +10,7 @@
     "default_popup": "popup.html"
   },
   "background": {
-    "scripts": ["scripts/setup.js", "scripts/notify.js", "background.js"]
+    "scripts": ["scripts/setup.js", "scripts/notify.js", "scripts/background.js"]
   },
   "icons": {
     "128": "images/icon128.png",

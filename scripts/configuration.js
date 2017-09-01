@@ -36,7 +36,7 @@ $(document).ready(function () {
     notificationMessageInput.val(EP.notificationMessage);
     disableOnWeekendInput.prop('checked', EP.disableOnWeekend == 'true');
     disableInput.prop('checked', EP.disable == 'true');
-    enableSoundInput.prop('checked', EP.enableSound);
+    enableSoundInput.prop('checked', EP.enableSound == 'true');
 
     if (EP.disable == 'true') {
         $('#overlay').show();
