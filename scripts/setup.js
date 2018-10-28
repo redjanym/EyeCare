@@ -1,17 +1,16 @@
 var EP = {
     startingHour: 8,
     endingHour: 17,
-    minutesPeriod: 30,
+    minutesPeriod: 59,
     notificationTitle: "Remember",
     notificationMessage: "Go and do some rest for your eyes!",
-    enableSound: true,
+    enableSound: 'true',
     disable: false,
     disableOnWeekend: false
 };
 
 function setUp () {
     if (typeof(Storage) !== "undefined") {
-
         // @todo loop through EP properties
         if(localStorage.startingHour){
             EP.startingHour = localStorage.startingHour;

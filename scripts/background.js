@@ -32,7 +32,7 @@ chrome.runtime.getBackgroundPage(function (backgroundPage) {
         var hour = date.getHours();
         var minutes = date.getMinutes();
 
-        return hour >= EP.startingHour && hour <= EP.endingHour && minutes % EP.minutesPeriod == 0
+        return hour >= EP.startingHour && hour <= EP.endingHour && minutes % EP.minutesPeriod === 0
     }
 
     function isWeekend() {
